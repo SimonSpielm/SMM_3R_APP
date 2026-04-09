@@ -17,9 +17,6 @@ import marimo
 __generated_with = "0.19.11"
 app = marimo.App(width="full")
 
-BRANCH = +1
-
-
 @app.cell
 def _():
     import marimo as mo
@@ -610,7 +607,7 @@ def _(ds, l1, l2, l3, progress_pct, core, target_x, target_y):
     result = {
         "ok": False,
         "message": "",
-        "branch": BRANCH,
+        "branch": 1,
         "lengths": lengths,
         "target_xy": target_xy,
         "progress_01": progress_01,
@@ -627,7 +624,7 @@ def _(ds, l1, l2, l3, progress_pct, core, target_x, target_y):
         qs, phi_seed = core.get_branch_curve(
             lengths=lengths,
             target_xy=target_xy,
-            branch=BRANCH,
+            branch=1,
             ds=float(ds.value),
         )
         emb = core.periodic_embedding_3d(qs)
