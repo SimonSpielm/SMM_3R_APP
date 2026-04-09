@@ -1,0 +1,3 @@
+marimo>=0.19.11
+numpy>=1.26
+plotly>=5.24
