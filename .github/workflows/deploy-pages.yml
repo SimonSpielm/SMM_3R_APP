@@ -45,6 +45,11 @@ jobs:
           marimo export html-wasm manipulability_marimo.py \
             -o dist/manipulability --mode run
 
+      - name: Export Two-Branch SMM app
+        run: |
+          marimo export html-wasm smm_two_branches_marimo.py \
+            -o dist/smm-two-branches --mode run
+
       - name: Create landing page
         run: |
           touch dist/.nojekyll
@@ -99,6 +104,11 @@ jobs:
                 <div class="icon">🔄</div>
                 <h2>Self-Motion Manifold</h2>
                 <p>Explore the closed self-motion manifold of the planar 3R manipulator.</p>
+              </a>
+              <a class="card" href="smm-two-branches/">
+                <div class="icon">🔀</div>
+                <h2>Two-Branch SMM</h2>
+                <p>Analyse two disconnected branches of the SMM and their singular transitions.</p>
               </a>
               <a class="card" href="manipulability/">
                 <div class="icon">📐</div>
