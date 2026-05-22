@@ -50,6 +50,11 @@ jobs:
           marimo export html-wasm smm_two_branches_marimo.py \
             -o dist/smm-two-branches --mode run
 
+      - name: Export Polytope app
+        run: |
+          marimo export html-wasm polytope_marimo.py \
+            -o dist/polytope --mode run
+
       - name: Create landing page
         run: |
           touch dist/.nojekyll
@@ -114,6 +119,11 @@ jobs:
                 <div class="icon">📐</div>
                 <h2>Manipulability</h2>
                 <p>Visualise weak and strong translational manipulability ellipsoids along the SMM.</p>
+              </a>
+              <a class="card" href="polytope/">
+                <div class="icon">🛑</div>
+                <h2>Velocity Polytopes</h2>
+                <p>Interactive analysis using workspace velocity polytopes with variable joint limits.</p>
               </a>
             </div>
           </body>
