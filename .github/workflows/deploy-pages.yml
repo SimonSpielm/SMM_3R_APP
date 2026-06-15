@@ -55,6 +55,11 @@ jobs:
           marimo export html-wasm polytope_marimo.py \
             -o dist/polytope --mode run
 
+      - name: Export RRT-Connect app
+        run: |
+          marimo export html-wasm rrt_connect_marimo.py \
+            -o dist/rrt-connect --mode run
+
       - name: Create landing page
         run: |
           touch dist/.nojekyll
@@ -124,6 +129,11 @@ jobs:
                 <div class="icon">🛑</div>
                 <h2>Velocity Polytopes</h2>
                 <p>Interactive analysis using workspace velocity polytopes with variable joint limits.</p>
+              </a>
+              <a class="card" href="rrt-connect/">
+                <div class="icon">🌲</div>
+                <h2>RRT-Connect</h2>
+                <p>Watch two rapidly exploring trees connect through a sparse 2D obstacle field.</p>
               </a>
             </div>
           </body>
